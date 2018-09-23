@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Http, HttpModule, Response } from "@angular/http";
+
+
 
 import { AppComponent } from './app.component';
 import { LeftSidebarComponent } from './admin/left-sidebar/left-sidebar.component';
@@ -19,9 +22,10 @@ import { CategoryListComponent } from './admin/category-list/category-list.compo
   ],
   imports: [
     BrowserModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [{ provide: "adminApiUrl", useValue: "http://northwindapi.azurewebsites.net/api" }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

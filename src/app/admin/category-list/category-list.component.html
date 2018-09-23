@@ -1,40 +1,26 @@
-<div class="card">
-    <div class="card-body">
-        <h4 class="card-title">Kategori Listesi</h4>
-        <div class="table-responsive m-t-40">
-            <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0"
-                width="100%">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    <tr>
-                        <td>Garrett Winters</td>
-                        <td>Accountant</td>
-                        <td>Tokyo</td>
-                        <td>63</td>
-                        <td>2011/07/25</td>
-                        <td>$170,750</td>
-                    </tr>
-                </tbody>
-            </table>
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-title">
+            <h4>Kategori Listesi </h4>
+
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Kategori Adı</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let category of categories;let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{category.categoryName}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
