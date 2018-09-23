@@ -1,0 +1,27 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { LeftSidebarComponent } from './admin/left-sidebar/left-sidebar.component';
+import { HeaderComponent } from './admin/header/header.component';
+import { CategoryAddComponent } from './admin/category-add/category-add.component';
+import { AdminRoutingModule } from './admin/admin-routing/admin-routing.module'
+import { RouterModule } from '@angular/router';
+import { CategoryListComponent } from './admin/category-list/category-list.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LeftSidebarComponent,
+    HeaderComponent,
+    CategoryAddComponent,
+    CategoryListComponent
+  ],
+  imports: [
+    BrowserModule,
+    AdminRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
