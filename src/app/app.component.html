@@ -31,7 +31,11 @@
                 </div>
             </div>
             <div class="container-fluid">
-                <router-outlet></router-outlet>
+                <div [hidden]="!globalService.isRequest" style="text-align: center;background:white;"><img src="/src/assets/admin/images/loading.gif"></div>
+                <div [hidden]="globalService.isRequest">
+                    <simple-notifications></simple-notifications>
+                    <router-outlet></router-outlet>
+                </div>
             </div>
         </div>
     </div>
