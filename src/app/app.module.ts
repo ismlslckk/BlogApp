@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Http, HttpModule, Response } from "@angular/http";
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -27,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AdminRoutingModule,
     HttpModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     SimpleNotificationsModule.forRoot({
       timeOut: 3000,
@@ -38,7 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     })
   ],
   providers: [
-    { provide: "adminApiUrl", useValue: "http://northwindapi.azurewebsites.net/api" },
+    { provide: "adminApiUrl", useValue: "http://localhost:56877/api" },
     { provide: "isRequest", useValue: true },
     GlobalService,
     NotificationsService

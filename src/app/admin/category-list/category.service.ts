@@ -13,11 +13,11 @@ export class CategoryService {
 
   constructor(private http: Http, @Inject("adminApiUrl") private apiUrl) { }
 
-  url: string = this.apiUrl + "/categories";
+  url: string = this.apiUrl + "/category/all";
   getCategories(): Observable<Category[]> {
    
     return this.http.get(this.url).map(response => {
-      // console.log(response.json());
+      console.log(response.json());
       return response.json()
     });
   }
