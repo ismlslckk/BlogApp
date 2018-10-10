@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Http, HttpModule, Response } from "@angular/http";
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 import { AppComponent } from './app.component';
@@ -27,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AdminRoutingModule,
     HttpModule,
+    FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     SimpleNotificationsModule.forRoot({

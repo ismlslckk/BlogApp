@@ -11,5 +11,5 @@ export class AppComponent implements OnInit {
   }
   constructor(private globalService:GlobalService){
   }
-  title = 'BlogApp'; 
+  title = 'Anasayfa'; 
 }

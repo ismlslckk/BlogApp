@@ -11,12 +11,14 @@
                         <tr>
                             <th>Id</th>
                             <th>Kategori Adı</th>
+                            <th>İşlem</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let category of categories;let i = index">
                             <td>{{i+1}}</td>
                             <td>{{category.name}}</td>
+                            <td><i style="cursor: pointer;" class="ti-trash"></i></td>
                         </tr>
                     </tbody>
                 </table>

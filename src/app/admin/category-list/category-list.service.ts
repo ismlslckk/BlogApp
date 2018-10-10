@@ -9,7 +9,7 @@ import { Category } from '../category-add/category'
 @Injectable({
   providedIn: 'root'
 })
-export class CategoryService {
+export class CategoryListService {
 
   constructor(private http: Http, @Inject("adminApiUrl") private apiUrl) { }
 
