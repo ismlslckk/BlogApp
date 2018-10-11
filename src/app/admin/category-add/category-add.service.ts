@@ -22,8 +22,8 @@ export class CategoryAddService {
     const body = new FormData();
     body.append('name', "fwef");
     return this.http
-        .post(this.url, body, this.options)
-        .map(r=>{return r;});
-    } 
-  
+      .post(this.url, body, this.options)
+      .map(response => { return response; });
+  }
+
 }

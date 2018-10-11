@@ -28,9 +28,23 @@ export class CategoryAddComponent {
     if (form.invalid)
       this.notificationService.error("Hata", "Kategori adı boş geçilemez.");
     else {
-      this.categoryAddService.Add(this.category).subscribe(r=>{
-        console.log(r);
-      });
+      this.categoryAddService.Add(this.category).subscribe(
+        data => {
+          var result = JSON.parse(data._body);  
+          console.log(result);
+          if (!result.isError)
+            this.notificationService.success("Başarılı", result.message);
+          else
+          this.notificationService.error("Hata", result.message);
+
+        },
+        err => {
+          console.log(err)
+        },
+        () => {
+          console.log("Complete function triggered.")
+        }
+      );
     }
 
   }
