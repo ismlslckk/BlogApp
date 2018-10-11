@@ -32,7 +32,7 @@ export class CategoryAddComponent {
         data => {
           var result = JSON.parse(data._body);  
           console.log(result);
-          if (!result.isError)
+          if (!result.isError) 
             this.notificationService.success("Başarılı", result.message);
           else
           this.notificationService.error("Hata", result.message);
