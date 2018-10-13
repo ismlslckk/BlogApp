@@ -13,7 +13,7 @@ import { Http, RequestOptions } from '@angular/http';
 })
 export class CategoryAddService {
 
-  constructor(private http: Http,private httpClient: HttpClient, @Inject("adminApiUrl") private apiUrl) { } 
+  constructor(private httpClient: HttpClient, @Inject("adminApiUrl") private apiUrl) { } 
   headers = new HttpHeaders(); 
   
   
