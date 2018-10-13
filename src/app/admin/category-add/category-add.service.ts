@@ -6,24 +6,24 @@ import 'rxjs/add/operator/catch';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Category } from '../category-add/category';
 import { Http, RequestOptions } from '@angular/http';
-
+ 
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryAddService {
 
-  constructor(private http: Http, @Inject("adminApiUrl") private apiUrl) { }
-  headers: Headers;
-  options: RequestOptions;
+  constructor(private http: Http,private httpClient: HttpClient, @Inject("adminApiUrl") private apiUrl) { } 
+  headers = new HttpHeaders(); 
+  
+  
   url: string = this.apiUrl + "/category/add";
 
-  Add(param: any): Observable<any> {
-    const body = new FormData();
-    body.append('name', "fwef");
-    return this.http
-      .post(this.url, body, this.options)
-      .map(response => { return response; });
+  Add(category: any): Observable<any> { 
+    this.headers.append('Content-Type','application/json'); 
+    return this.httpClient
+      .post(this.url, category,{ headers: this.headers} )
+      .map(response => {return response; });
   }
 
 }

@@ -29,17 +29,16 @@ export class CategoryAddComponent {
       this.notificationService.error("Hata", "Kategori adı boş geçilemez.");
     else {
       this.categoryAddService.Add(this.category).subscribe(
-        data => {
-          var result = JSON.parse(data._body);  
-          console.log(result);
+        result => { 
+          
           if (!result.isError) 
             this.notificationService.success("Başarılı", result.message);
           else
           this.notificationService.error("Hata", result.message);
 
         },
-        err => {
-          console.log(err)
+        err => { 
+          this.notificationService.error("Hata", err.message);
         },
         () => {
           console.log("Complete function triggered.")
