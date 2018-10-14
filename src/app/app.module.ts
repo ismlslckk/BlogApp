@@ -15,6 +15,8 @@ import { CategoryListComponent } from './admin/category-list/category-list.compo
 import { GlobalService } from './admin/global.service';
 import { SimpleNotificationsModule, NotificationsService } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalDialogModule } from 'ngx-modal-dialog';
+
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       clickToClose: false,
       clickIconToClose: true,
       position:["top", "right"]
-    })
+    }),
+    ModalDialogModule.forRoot()
   ],
   providers: [
     { provide: "adminApiUrl", useValue: "http://localhost:56877/api" },

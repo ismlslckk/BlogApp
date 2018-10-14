@@ -13,12 +13,19 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class CategoryListService {
 
   constructor(private http: HttpClient, @Inject("adminApiUrl") private apiUrl) { }
-
-  url: string = this.apiUrl + "/category/all";
+ 
   getCategories(): Observable<Category[]> {
 
-    return this.http.get<Category[]>(this.url).map(response => {
+    return this.http.get<Category[]>(this.apiUrl+"/category/all").map(response => {
       return response;
     });
   }
+
+  deleteCategory(id:string): Observable<any>{
+    return this.http.get<any>(this.apiUrl+"/category/delete?id="+id).map(response => {
+      return response;
+    });
+  }
+
+  
 }

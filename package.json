@@ -22,6 +22,7 @@
     "@angular/router": "^6.1.0",
     "angular2-notifications": "^1.0.4",
     "core-js": "^2.5.4",
+    "ngx-modal-dialog": "^3.0.0",
     "rx-observable-update": "^1.0.0",
     "rxjs": "^6.2.2",
     "rxjs-compat": "^6.0.0-tactical-rc.1",

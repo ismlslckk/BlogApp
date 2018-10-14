@@ -11,6 +11,7 @@
                         <tr>
                             <th>Id</th>
                             <th>Kategori Adı</th>
+                            <th>Durumu</th>
                             <th>İşlem</th>
                         </tr>
                     </thead>
@@ -18,7 +19,8 @@
                         <tr *ngFor="let category of categories;let i = index">
                             <td>{{i+1}}</td>
                             <td>{{category.name}}</td>
-                            <td><i style="cursor: pointer;" class="ti-trash"></i></td>
+                            <td *ngIf="category.active; else pasif"><span class="label label-primary">Aktiv</span></td>
+                            <td><i (click)="deleteCategory(category)" style="cursor: pointer;" class="ti-trash"></i></td>
                         </tr>
                     </tbody>
                 </table>
@@ -26,3 +28,7 @@
         </div>
     </div>
 </div>
+
+<ng-template #pasif>
+    <td><span class="label label-danger">Pasif</span></td>
+</ng-template>
