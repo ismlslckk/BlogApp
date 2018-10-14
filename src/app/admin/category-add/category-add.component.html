@@ -16,7 +16,8 @@
           </div>
           <div class="checkbox">
             <label>
-              <input checked="checked" type="checkbox"> Aktif
+              <input checked="checked" #active="ngModel" name="active" [(ngModel)]="category.active" type="checkbox">
+              Aktif
             </label>
           </div>
           <button type="submit" [disabled]="categoryAddForm.invalid" class="btn btn-primary btn-flat btn-addon m-b-10 m-l-5"><i

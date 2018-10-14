@@ -6,7 +6,6 @@ import { NotificationsService } from 'angular2-notifications';
 import { GlobalService } from '../global.service';
 
 
-
 @Component({
   selector: 'app-category-add',
   templateUrl: './category-add.component.html',
@@ -22,22 +21,20 @@ export class CategoryAddComponent {
   constructor(private categoryAddService: CategoryAddService, private globalService: GlobalService,
     private notificationService: NotificationsService) { }
 
-
-
   Add(form: NgForm) {
     if (form.invalid)
       this.notificationService.error("Hata", "Kategori adı boş geçilemez.");
     else {
       this.categoryAddService.Add(this.category).subscribe(
-        result => { 
-          
-          if (!result.isError) 
+        result => {
+          if (!result.isError){
             this.notificationService.success("Başarılı", result.message);
+            form.resetForm();
+          }
           else
-          this.notificationService.error("Hata", result.message);
-
+            this.notificationService.error("Hata", result.message.toString());
         },
-        err => { 
+        err => {
           this.notificationService.error("Hata", err.message);
         },
         () => {
@@ -45,6 +42,6 @@ export class CategoryAddComponent {
         }
       );
     }
-
   }
+ 
 }
