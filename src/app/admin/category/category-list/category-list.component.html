@@ -20,7 +20,10 @@
                             <td>{{i+1}}</td>
                             <td>{{category.name}}</td>
                             <td *ngIf="category.active; else pasif"><span class="label label-primary">Aktiv</span></td>
-                            <td><i (click)="deleteCategory(category)" style="cursor: pointer;" class="ti-trash"></i></td>
+                            <td>
+                                <i (click)="deleteCategory(category)" style="cursor: pointer;" class="ti-trash"></i> 
+                                <a routerLink="/category-update/{{category.id}}"><i style="cursor: pointer;" class="ti-marker-alt"></i></a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

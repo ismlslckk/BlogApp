@@ -22,7 +22,7 @@ export class CategoryListService {
   }
 
   deleteCategory(id:string): Observable<any>{
-    return this.http.get<any>(this.apiUrl+"/category/delete?id="+id).map(response => {
+       return this.http.delete<any>(this.apiUrl+"/category/delete?id="+id).map(response => {
       return response;
     });
   }

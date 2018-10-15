@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewContainerRef } from '@angular/cor
 import { Category } from '../category-add/category'
 import { CategoryListService } from './category-list.service'
 import { NotificationsService } from 'angular2-notifications';
-import { GlobalService } from '../global.service';
+import { GlobalService } from '../../global.service';
 import { ModalDialogService, SimpleModalComponent } from 'ngx-modal-dialog';
 
 

@@ -3,7 +3,7 @@ import { CategoryAddService } from './category-add.service';
 import { Category } from './category';
 import { NgForm } from '@angular/forms'
 import { NotificationsService } from 'angular2-notifications';
-import { GlobalService } from '../global.service';
+import { GlobalService } from '../../global.service';
 
 
 @Component({

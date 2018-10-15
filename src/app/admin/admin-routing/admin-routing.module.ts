@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { CategoryAddComponent } from '../category-add/category-add.component';
-import { CategoryListComponent } from '../category-list/category-list.component';
+import { CategoryAddComponent } from '../category/category-add/category-add.component';
+import { CategoryListComponent } from '../category/category-list/category-list.component';
+import { CategoryUpdateComponent } from '../category/category-update/category-update.component';
 
 const routes: Routes = [
   {
@@ -11,8 +12,12 @@ const routes: Routes = [
   {
     path: "category-list",
     component: CategoryListComponent
+  },
+  {
+    path: "category-update/:id",
+    component: CategoryUpdateComponent
   } 
-];
+]; 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {

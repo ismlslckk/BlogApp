@@ -9,13 +9,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LeftSidebarComponent } from './admin/left-sidebar/left-sidebar.component';
 import { HeaderComponent } from './admin/header/header.component';
-import { CategoryAddComponent } from './admin/category-add/category-add.component';
+import { CategoryAddComponent } from './admin/category/category-add/category-add.component';
 import { AdminRoutingModule } from './admin/admin-routing/admin-routing.module';
-import { CategoryListComponent } from './admin/category-list/category-list.component';
+import { CategoryListComponent } from './admin/category/category-list/category-list.component';
 import { GlobalService } from './admin/global.service';
 import { SimpleNotificationsModule, NotificationsService } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalDialogModule } from 'ngx-modal-dialog';
+import { CategoryUpdateComponent } from './admin/category/category-update/category-update.component';
 
 
 
@@ -25,7 +26,8 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
     LeftSidebarComponent,
     HeaderComponent,
     CategoryAddComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    CategoryUpdateComponent
   ],
   imports: [
     BrowserModule,
