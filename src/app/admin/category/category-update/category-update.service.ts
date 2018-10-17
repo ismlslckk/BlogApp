@@ -26,7 +26,7 @@ export class CategoryUpdateService {
     });
   }
 
-  Update(category: any): Observable<any> { 
+  Update(category: Category): Observable<any> { 
     this.headers.append('Content-Type','application/json'); 
     return this.httpClient
       .put(this.url, category,{ headers: this.headers} )

@@ -11,8 +11,6 @@
             <label>Kategori Adı</label>
             <input (change)="isDirty=true" #name="ngModel" [(ngModel)]="category.name" type="text" class="form-control"
               id="name" name="name" required>
-            <span style="color:red;" *ngIf="name.invalid && (name.dirty || name.touched)" class="help-block">Kategori
-              Adı boş geçilemez.</span>
           </div>
           <div class="checkbox">
             <label>
@@ -20,7 +18,7 @@
               Aktif
             </label>
           </div>
-          <button type="submit" [disabled]="categoryAddForm.invalid" class="btn btn-primary btn-flat btn-addon m-b-10 m-l-5"><i
+          <button type="submit" class="btn btn-primary btn-flat btn-addon m-b-10 m-l-5"><i
               class="ti-plus"></i>Ekle</button>
         </form>
       </div>
